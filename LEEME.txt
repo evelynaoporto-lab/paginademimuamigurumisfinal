@@ -1,0 +1,28 @@
+AMIGURUMIS MIMU — SITIO WEB
+
+ARCHIVOS
+- index.html: estructura y contenido de la página.
+- style.css: diseño adaptable a celulares y computadoras.
+- script.js: navegación, buscador, favoritos, carrito y pedido por WhatsApp.
+- products.js: catálogo, precios y rutas de fotografías.
+- assets/: logo y fotografías de los productos.
+
+ABRIR EN TREBEDIT
+1. Descargá y extraé el ZIP.
+2. Abrí la carpeta Mimu_Website completa en TrebEdit.
+3. Ejecutá index.html en la vista previa.
+4. No muevas ni renombres la carpeta assets ni los archivos JS/CSS.
+
+AJUSTES DE ESTA VERSIÓN
+- Se corrigieron las fotografías de flores y ramos: ahora se muestran las fotos del producto, sin los textos del catálogo.
+- Se recortaron también las fotos de decoración navideña para quitar los rótulos de los PDF.
+- Las imágenes de las tarjetas usan proporciones uniformes y se muestran completas, evitando cortar partes de los productos.
+- Se corrigieron los identificadores duplicados de los botones del carrito.
+- Se reforzó el manejo del carrito y de los datos guardados para evitar cantidades NaN.
+- Se actualizaron los enlaces de Instagram y WhatsApp con los enlaces enviados por la dueña de Mimu.
+- El pedido se prepara con el detalle de productos, cantidades y total estimado para abrir WhatsApp.
+
+PENDIENTE DE INCORPORAR
+- Fotos y precios de scrunchies y marcapáginas.
+- Si un producto tiene varias fotografías, se podrán incorporar como galería en su ficha.
+- Revisar los precios y la disponibilidad antes de publicar la página.

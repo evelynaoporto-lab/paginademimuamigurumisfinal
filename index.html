@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#74866d"><meta name="description" content="Amigurumis Mimu: creaciones tejidas y accesorios hechos a mano. Descubrí nuestros productos y realizá tu pedido por WhatsApp.">
+  <title>Amigurumis Mimu | Pequeños detalles, grandes sonrisas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" data-view="home" aria-label="Amigurumis Mimu, inicio"><img src="assets/logo-mimu.png" alt="Logo Amigurumis Mimu"></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#inicio" data-view="home" class="nav-link active">Inicio</a>
+        <a href="#productos" data-view="catalog" class="nav-link">Productos</a>
+        <a href="#sobre-mimu" data-view="about" class="nav-link">Sobre Mimu</a>
+        <a href="#proceso" data-view="process" class="nav-link">Nuestro proceso</a>
+        <a href="#contacto" data-view="contact" class="nav-link">Contacto</a>
+      </nav>
+      <button class="header-cart" id="openCartTop"><span>♧</span> Mi carrito <b id="cartCountTop">0</b></button>
+    </header>
+
+    <main id="main">
+      <section class="view active" id="homeView">
+        <section class="hero" id="inicio">
+          <div class="hero-image" aria-hidden="true"></div><div class="hero-shade"></div>
+          <div class="hero-content">
+            <span class="eyebrow light">✳ Hecho a mano, con dedicación</span>
+            <h1>Pequeños detalles,<br>grandes sonrisas.</h1>
+            <p>Creaciones tejidas y confeccionadas a mano, pensadas para regalar, acompañar y hacer especial cada momento.</p>
+            <button class="pill-button outline-light" data-view="catalog">Descubrir productos <span>↗</span></button>
+          </div>
+          <span class="hero-note">AMIGURUMIS MIMU · EST. 2024</span>
+        </section>
+
+        <div class="floating-search-wrap">
+          <div class="floating-search">
+            <label class="search-field"><span>⌕</span><input id="homeSearch" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar productos"></label>
+            <span class="search-divider"></span>
+            <button class="search-shortcut" data-view="catalog">Explorar categorías</button>
+            <button class="search-icon" data-view="catalog" aria-label="Ver productos">⌕</button>
+            <button class="cart-round" id="openCartFloat" aria-label="Abrir carrito">♧ <span id="cartCountFloat">0</span></button>
+          </div>
+          <button class="search-go" data-view="catalog">Ver tienda <span>→</span></button>
+        </div>
+
+        <section class="intro-section section-pad">
+          <div class="intro-photo-wrap"><img src="assets/peluches-p6-1.jpeg" alt="Ranita tejida a mano de Mimu"><span class="round-stamp">♡<small>Hecho<br>con amor</small></span><span class="photo-caption">Una creación, muchas horas de dedicación.</span></div>
+          <div class="intro-copy"><span class="eyebrow">UN MUNDO HECHO A MANO</span><h2>Bienvenidos a<br><em>Amigurumis Mimu</em></h2><p>Mimu es un pequeño emprendimiento que crece puntada a puntada. Cada pieza nace del gusto por crear con las manos, cuidar los detalles y transformar materiales en regalos únicos.</p><p class="muted">Conocé nuestra historia y descubrí todo lo que hay detrás de cada creación.</p><button class="pill-button" data-view="about">Conocer nuestra historia <span>↗</span></button></div>
+        </section>
+
+        <section class="featured-section section-pad" id="destacados">
+          <div class="section-heading"><span class="eyebrow">UN POCO DE MIMU</span><h2>Creaciones para atesorar</h2><p>Pequeñas piezas hechas a mano para regalar o regalarte.</p></div>
+          <div class="product-grid featured-grid" id="featuredGrid"></div>
+          <div class="center-action"><button class="pill-button" data-view="catalog">Ver todos los productos <span>→</span></button></div>
+        </section>
+
+        <section class="category-band section-pad">
+          <div class="section-heading"><span class="eyebrow">ENCONTRÁ TU FAVORITO</span><h2>Un detalle para cada ocasión</h2></div>
+          <div class="category-chips">
+            <button data-category="Peluches amigurumis">Peluches amigurumis <span>↗</span></button><button data-category="Llaveros">Llaveros <span>↗</span></button><button data-category="Flores y ramos">Flores y ramos <span>↗</span></button><button data-category="Scrunchies">Scrunchies <span>↗</span></button><button data-category="Marcapáginas">Marcapáginas <span>↗</span></button><button data-category="Decoración">Decoración <span>↗</span></button>
+          </div>
+        </section>
+        <section class="quote-strip"><span>✳</span><p>“Cada proyecto comienza con una pequeña idea y crece con paciencia, práctica y muchas ganas de crear.”</p><span>✳</span></section>
+      </section>
+
+      <section class="view inner-view" id="catalogView">
+        <div class="inner-hero"><span class="eyebrow">LA TIENDA DE MIMU</span><h1>Encontrá algo<br><em>hecho para vos.</em></h1><p>Explorá nuestras creaciones y guardá tus favoritas en el carrito.</p></div>
+        <div class="catalog-toolbar"><div class="catalog-search"><span>⌕</span><input id="catalogSearch" type="search" placeholder="Buscar por nombre..."></div><span id="resultsCount" class="results-count"></span></div>
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="product-grid catalog-grid" id="catalogGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No encontramos productos con esa búsqueda. Probá con otra palabra.</div>
+        <div class="coming-note"><span>✳</span><div><strong>Más creaciones en camino</strong><p>Las scrunchies y los marcapáginas se sumarán muy pronto. Estamos preparando sus fotografías y detalles.</p></div></div>
+      </section>
+
+      <section class="view inner-view story-view" id="aboutView">
+        <div class="inner-hero story-hero"><span class="eyebrow">UN POCO DE NUESTRA HISTORIA</span><h1>Todo comienza<br>con una <em>puntada.</em></h1><p>Una historia de aprendizaje, creatividad y crecimiento.</p></div>
+        <div class="story-layout"><div class="story-image"><img src="assets/ramo-flores-rojas.jpg" alt="Ramo de flores tejido a crochet"><span class="image-label">Mimu · Desde 2024</span></div><article class="story-text"><span class="eyebrow">SOBRE MIMU</span><h2>De aprender por curiosidad a crear con identidad propia.</h2><p>El crochet llegó a mi vida desde pequeña. Al principio aprendí algunas cosas básicas y, con el tiempo, fui descubriendo nuevas posibilidades por mi cuenta: mirando, practicando, probando y aprendiendo de cada creación.</p><p>Lo que comenzó como una actividad que disfrutaba fue creciendo poco a poco. En 2024 nació <strong>Amigurumis Mimu</strong> como emprendimiento y empecé a compartir mis trabajos en Instagram. Así, cada publicación se convirtió en una oportunidad para mostrar lo que hacía y llegar a nuevas personas.</p><p>Con los años fui mejorando, experimentando con formas, colores y detalles, hasta lograr crear mis propias piezas con cada vez más autonomía. Mimu es el resultado de esa evolución: un espacio donde cada creación lleva tiempo, dedicación y una parte de mí.</p><p>En 2026 se sumó una nueva propuesta: las <strong>scrunchies</strong>, gomitas para el cabello confeccionadas a mano con tela y máquina de coser. Una manera de seguir aprendiendo y ampliar el universo de Mimu.</p><blockquote>“No hace falta saberlo todo para empezar. A veces alcanza con animarse a dar el primer paso, aprender en el camino y no dejar de intentarlo. Lo que hoy parece pequeño también puede convertirse en algo hermoso.”</blockquote><p class="signature">Con cariño, Mimu ♡</p></article></div>
+        <div class="story-values"><div><span>01</span><strong>Aprender</strong><p>Crecer a través de la práctica y la curiosidad.</p></div><div><span>02</span><strong>Crear</strong><p>Transformar ideas en piezas hechas a mano.</p></div><div><span>03</span><strong>Compartir</strong><p>Dar vida a detalles que acompañan momentos especiales.</p></div></div>
+      </section>
+
+      <section class="view inner-view process-view" id="processView">
+        <div class="inner-hero"><span class="eyebrow">DE LA IDEA A CADA DETALLE</span><h1>Hecho a mano,<br><em>paso a paso.</em></h1><p>Detrás de cada pieza hay tiempo, dedicación y un proceso propio.</p></div>
+        <div class="process-block"><div class="process-intro"><span class="eyebrow">01 · CROCHET</span><h2>Amigurumis</h2><p>Cada figura se construye con paciencia, cuidando su forma y sus terminaciones.</p></div><div class="steps"><div><b>01</b><h3>Preparación</h3><p>Elección de hilos, colores y materiales necesarios para cada diseño.</p></div><div><b>02</b><h3>Tejido</h3><p>Se tejen las distintas partes de la figura, dando forma a cada pieza.</p></div><div><b>03</b><h3>Armado</h3><p>Se rellenan y unen las partes, cuidando proporciones y estructura.</p></div><div><b>04</b><h3>Detalles finales</h3><p>Se agregan los detalles y se revisan las terminaciones antes de presentar la creación.</p></div></div></div>
+        <div class="process-block sewing"><div class="process-intro"><span class="eyebrow">02 · CONFECCIÓN</span><h2>Scrunchies</h2><p>Una nueva incorporación a Mimu en 2026: accesorios textiles confeccionados a mano.</p></div><div class="steps"><div><b>01</b><h3>Selección y corte</h3><p>Se elige la tela y se corta según las medidas definidas para cada tamaño.</p></div><div><b>02</b><h3>Costura</h3><p>Se unen los bordes de la tela utilizando la máquina de coser.</p></div><div><b>03</b><h3>Elástico</h3><p>Se incorpora el elástico para darle la forma y funcionalidad a la gomita.</p></div><div><b>04</b><h3>Terminación</h3><p>Se acomodan las costuras y se revisa cada pieza para dejarla lista.</p></div></div></div>
+      </section>
+
+      <section class="view inner-view contact-view" id="contactView">
+        <div class="inner-hero"><span class="eyebrow">ESTAMOS PARA AYUDARTE</span><h1>Hablemos de<br><em>tu próximo pedido.</em></h1><p>Elegí tus favoritos y escribinos. ¡Nos encantará preparar tu pedido!</p></div>
+        <div class="contact-cards"><a href="https://www.instagram.com/amigurumis_mimu?dmpr=YXliMmRlNm91cnc=" target="_blank" rel="noopener"><span>◎</span><small>SEGUINOS EN INSTAGRAM</small><strong>@Amigurumis_mimu</strong><i>Visitar perfil ↗</i></a><a href="https://wa.me/qr/2J5IUY5SJVCJD1" target="_blank" rel="noopener"><span>◉</span><small>CONSULTAS Y PEDIDOS</small><strong>WhatsApp Mimu</strong><i>Escribir mensaje ↗</i></a></div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto"><div class="footer-brand"><img src="assets/logo-mimu.png" alt="Amigurumis Mimu"><p>Pequeños detalles, grandes sonrisas.</p></div><div><span>EXPLORÁ</span><a href="#productos" data-view="catalog">Productos</a><a href="#sobre-mimu" data-view="about">Sobre Mimu</a><a href="#proceso" data-view="process">Nuestro proceso</a></div><div><span>ENCONTRANOS</span><a href="https://www.instagram.com/amigurumis_mimu?dmpr=YXliMmRlNm91cnc=" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/qr/2J5IUY5SJVCJD1" target="_blank" rel="noopener">WhatsApp ↗</a></div><div class="copyright">© 2026 Amigurumis Mimu<br>Hecho con dedicación ♡</div></footer>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div><aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras"><div class="cart-head"><div><span class="eyebrow">TU SELECCIÓN</span><h2>Mi carrito <span id="cartCount">0</span></h2></div><button id="closeCart" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><span>♡</span><h3>Tu carrito está vacío</h3><p>Cuando encuentres algo que te guste, agregalo acá.</p><button class="pill-button" id="continueShopping">Explorar productos</button></div><div class="cart-bottom" id="cartBottom"><div class="subtotal"><span>Total estimado</span><strong id="cartTotal">$0</strong></div><p>El pedido se enviará por WhatsApp para confirmar disponibilidad y detalles.</p><button class="pill-button checkout-button" id="checkout">Finalizar compra <span>↗</span></button></div></aside>
+  <div class="product-modal" id="productModal"><div class="modal-backdrop" data-close-modal></div><div class="modal-card"><button class="modal-close" data-close-modal>×</button><img id="modalImage" src="" alt=""><div class="modal-copy"><span class="eyebrow">HECHO A MANO</span><h2 id="modalName"></h2><p id="modalDescription"></p><strong id="modalPrice"></strong><button class="pill-button" id="modalAdd">Agregar al carrito <span>＋</span></button></div></div></div>
+  <script src="products.js"></script><script src="script.js"></script>
+</body></html>
